@@ -1,13 +1,19 @@
 import "expo-dev-client";
 
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, View } from "react-native";
+import Animated, { useSharedValue, withSpring } from "react-native-reanimated";
 
 export default function App() {
+  const width = useSharedValue(100);
+
+  const handlePress = () => {
+    width.value = withSpring(width.value + 50);
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Animated.View style={[{ width }, styles.animated]} />
+      <Button onPress={handlePress} title="Click me" />
     </View>
   );
 }
@@ -18,5 +24,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  animated: {
+    height: 100,
+    backgroundColor: "violet",
   },
 });
