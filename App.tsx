@@ -3,7 +3,7 @@ import "expo-dev-client";
 import { StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-import { MyFirstSkia } from "./src/MyFirstSkia/MyFirstSkia";
+import { MyFirstSkia } from "./src/joconde/MyFirstSkia/MyFirstSkia";
 
 export default function App() {
   return (
