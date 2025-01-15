@@ -1,20 +1,17 @@
 import "expo-dev-client";
 
-import { Button, StyleSheet, View } from "react-native";
-import Animated, { useSharedValue, withSpring } from "react-native-reanimated";
+import { StyleSheet, View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+
+import { MyFirstGestureHandler } from "./src/MyFirstGestureHandler/MyFirstGestureHandler";
 
 export default function App() {
-  const width = useSharedValue(100);
-
-  const handlePress = () => {
-    width.value = withSpring(width.value + 50);
-  };
-
   return (
-    <View style={styles.container}>
-      <Animated.View style={[{ width }, styles.animated]} />
-      <Button onPress={handlePress} title="Click me" />
-    </View>
+    <GestureHandlerRootView>
+      <View style={styles.container}>
+        <MyFirstGestureHandler />
+      </View>
+    </GestureHandlerRootView>
   );
 }
 
@@ -24,9 +21,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-  },
-  animated: {
-    height: 100,
-    backgroundColor: "violet",
   },
 });
