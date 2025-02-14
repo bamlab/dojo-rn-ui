@@ -1,6 +1,6 @@
 import { Canvas, Circle, Group } from "@shopify/react-native-skia";
 
-export const MyFirstSkia = () => {
+export const SkiaExample = () => {
   const width = 256;
   const height = 256;
   const r = width * 0.33;

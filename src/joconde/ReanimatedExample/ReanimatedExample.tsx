@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Button, StyleSheet } from "react-native";
 import Animated, { useSharedValue, withSpring } from "react-native-reanimated";
 
-export const MyFirstAnimation = () => {
+export const ReanimatedExample = () => {
   const width = useSharedValue(100);
 
   const handlePress = () => {
