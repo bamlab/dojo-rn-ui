@@ -1,3 +1,5 @@
+import { CircularMenu } from "../../joconde/CircularPopupMenu/Base";
+
 export const Sandbox = () => {
-  return null;
+  return <CircularMenu />;
 };
