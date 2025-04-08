@@ -1,4 +1,4 @@
-import { CircularMenu } from "../../joconde/CircularPopupMenu/Step1Bezier";
+import { CircularMenu } from "../../joconde/CircularPopupMenu/Step2";
 
 export const Sandbox = () => {
   return <CircularMenu />;
