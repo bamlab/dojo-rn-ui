@@ -2,14 +2,16 @@ import { Picker } from "@react-native-picker/picker";
 import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 
+import { CircularMenu } from "../../joconde/CircularPopupMenu/Step3";
 import { ColorfulLoader } from "../../joconde/ColorfulLoader/Step5";
 import { GestureHandlerExample } from "../../joconde/GestureHandlerExample/GestureHandlerExample";
 import { ReanimatedExample } from "../../joconde/ReanimatedExample/ReanimatedExample";
 import { SkiaExample } from "../../joconde/SkiaExample/SkiaExample";
 
 export const Storybook = () => {
-  const [selectedComponentTitle, setSelectedComponentTitle] =
-    useState<string>("Colorful loader");
+  const [selectedComponentTitle, setSelectedComponentTitle] = useState<string>(
+    "Circular Popup Menu",
+  );
 
   const selectedComponentObject = findSelectedComponent(selectedComponentTitle);
 
@@ -38,6 +40,10 @@ export const Storybook = () => {
 const Separator = () => <View style={styles.separator} />;
 
 const components: { title: string; component: () => React.JSX.Element }[] = [
+  {
+    title: "Circular Popup Menu",
+    component: () => <CircularMenu />,
+  },
   {
     title: "Colorful loader",
     component: () => <ColorfulLoader />,
